@@ -1,1 +1,5 @@
-conlsole.log('linked');
+console.log('linked');
+/*modal funtion--------------------------------------------------------------------------------------*/
+$(document).ready(function(){
+    $('.modal').modal();
+  });
