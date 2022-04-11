@@ -1,4 +1,5 @@
 
+
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
 var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"
@@ -47,3 +48,9 @@ fetch(despiration)
       console.log(data)
     })
 }
+console.log('linked');
+/*modal funtion--------------------------------------------------------------------------------------*/
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+
