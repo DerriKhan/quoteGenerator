@@ -1,8 +1,7 @@
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
-var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"
+var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
 var LJ = document.querySelector('#LJ')
-
 fetch(jokeLight)
     .then(function (response) {
       return response.json()
@@ -20,8 +19,8 @@ fetch(jokeLight)
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
-    var jokeDark = "https://v2.jokeapi.dev/joke/Any?"
-    var LJ = document.querySelector('#DJ')
+    var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
+    var DJ = document.querySelector('#DJ')
 fetch(jokeDark)
     .then(function (response) {
       return response.json()
@@ -39,16 +38,17 @@ fetch(jokeDark)
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
     var inspiration = "https://api.goprogram.ai/inspiration"
-    var LJ = document.querySelector('#insp')
+    var insp = document.querySelector('#insp')
 fetch(inspiration)
     .then(function (response) {
-      console.log(data)
-      return response.json()
+      return response.json();
     })
     .then(function (data) {
+      console.log(data);
+
       var quoteLocation = document.createElement('p')
 
-      quoteLocation.textContent=((data.setup) + (" ") + (data.delivery))
+      quoteLocation.textContent=((data.quote) + (" ") + (data.author))
       
       insp.append(quoteLocation)
     })
@@ -57,24 +57,23 @@ fetch(inspiration)
 document.getElementById("despireButton").addEventListener("click", despire);
 function despire() {
     var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
-    var LJ = document.querySelector('#desp')
+    var desp = document.querySelector('#desp')
 fetch(despiration)
-    .then(function (response) {
-      console.log(data)
-      return response.json()
+    .then(function (data) {
+      return data.json()
     })
     .then(function (data) {
+      console.log(data);
+
       var quoteLocation = document.createElement('p')
 
-      quoteLocation.textContent=((data.setup) + (" ") + (data.delivery))
+      quoteLocation.textContent=(data.message + (" - Donald Trump"))
       
       desp.append(quoteLocation)
     })
 }
-console.log('linked');
-/*modal funtion--------------------------------------------------------------------------------------*/
+
 $(document).ready(function(){
     $('.modal').modal();
     $('.modal').modal('open')
   });
-
