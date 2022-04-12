@@ -6,6 +6,9 @@ var despireCard = document.querySelector('#despire-text')
 
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
+  var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"
+
+  fetch(jokeLight)
     var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"  
  fetch(jokeLight)
 var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
@@ -23,6 +26,8 @@ fetch(jokeLight)
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
+  var jokeDark = "https://v2.jokeapi.dev/joke/Any"
+  fetch(jokeDark)
     var jokeDark = "https://v2.jokeapi.dev/joke/Any?"
     var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
     var DJ = document.querySelector('#DJ')
@@ -39,6 +44,8 @@ fetch(jokeDark)
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
+  var inspiration = "https://api.goprogram.ai/inspiration"
+  fetch(inspiration)
     var inspiration = "https://api.goprogram.ai/inspiration"
 fetch(inspiration)
     .then(function (response) {
@@ -65,6 +72,8 @@ fetch(inspiration)
 
 document.getElementById("despireButton").addEventListener("click", despire);
 function despire() {
+  var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
+  fetch(despiration)
     var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
 fetch(despiration)
     .then(function (response) {
@@ -91,6 +100,31 @@ fetch(despiration)
       desp.append(quoteLocation)
     })
 }
+console.log('linked');
+/*modal funtion--------------------------------------------------------------------------------------*/
+$(document).ready(function () {
+  $('.modal').modal();
+  $('.modal').modal('open')
+});
+
+
+// changing theme by button section
+document.querySelector('#despireButton').addEventListener('click', () => {
+  document.querySelector('#despire-card').classList.add('dark-card');
+}); 
+
+document.querySelector('#darkButton').addEventListener('click', () => {
+  document.querySelector('#dark-card').classList.add('dark-card');
+}); 
+
+document.querySelector('#inspireButton').addEventListener('click', () => {
+  document.querySelector('#inspire-card').classList.add('light-card');
+}); 
+
+document.querySelector('#lightButton').addEventListener('click', () => {
+  document.querySelector('#light-card').classList.add('light-card');
+}); 
+=======
 
 $(document).ready(function(){
     $('.modal').modal();
