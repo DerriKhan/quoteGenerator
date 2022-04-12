@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Test Page</title>
+
     <link rel="stylesheet" href="base-css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Meow+Script&family=Oleo+Script+Swash+Caps&family=Pathway+Gothic+One&display=swap"
         rel="stylesheet">
-=======
     <title>Document</title>
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
->>>>>>> dev
 </head>
 
 <body>
-<<<<<<< HEAD
+
+    <!-- <container>
+
     <container>
         <div class="text-bubble">
             <h1 class="fire">Choose your path</h1>
@@ -36,14 +35,74 @@
                 organic
                 retro.</h2>
         </div>
-    </container>
-=======
+    </container> -->
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card" class="light-card" id="light-card">
+          <div class="card-content">
+            <span class="card-title" id="light-title">Light</span>
+            <p id ="light-txt"></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card" class="dark-card" id="dark-card">
+          <div class="card-content">
+            <span class="card-title" id="dark-title">Dark</span>
+            <p id="dark-text"></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card" class="light-card" id="inspire-card">
+          <div class="card-content">
+            <span class="card-title" id="inspire-title">Inspire</span>
+            <p id="inspire-text"></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card" class="dark-card" id="despire-card">
+          <div class="card-content">
+            <span class="card-title" id="despire-title">Despire</span>
+            <p id="despire-text"></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h1>Choose your path</h1>
-ns-create-logic
    <button id="lightButton">Light</button>
    <button id="darkButton">Dark</button>
    <button id="inspireButton">Inspire</button>
    <button id="despireButton">De-spire</button>
+   <div id="LJ"></div>
+   <div id="DJ"></div>
+   <div id="insp"></div>
+   <div id="desp"></div>
+
 
 
 <!-- Modal Trigger -->
@@ -66,7 +125,13 @@ ns-create-logic
   </div>
 </div>
 
->>>>>>> dev
+
+<ul id ="fav-quote"class="collection container col s12 m6">
+  <li class="collection-item"></li>
+  <li class="collection-item"></li>
+  <li class="collection-item"></li>
+  <li class="collection-item"></li>
+</ul>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
