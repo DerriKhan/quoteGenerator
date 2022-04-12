@@ -8,6 +8,9 @@ document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
     var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"  
  fetch(jokeLight)
+var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
+var LJ = document.querySelector('#LJ')
+fetch(jokeLight)
     .then(function (response) {
       return response.json()
     })
@@ -21,6 +24,9 @@ function lightJoke() {
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
     var jokeDark = "https://v2.jokeapi.dev/joke/Any?"
+    var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
+    var DJ = document.querySelector('#DJ')
+
 fetch(jokeDark)
     .then(function (response) {
       return response.json()
@@ -41,6 +47,19 @@ fetch(inspiration)
     .then(function (data) {
       console.log(data)
       inspireCard.textContent=((data.setup) + (" ") + (data.delivery))
+    var insp = document.querySelector('#insp')
+fetch(inspiration)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent=((data.quote) + (" ") + (data.author))
+      
+      insp.append(quoteLocation)
     })
 }
 
@@ -57,8 +76,23 @@ fetch(despiration)
 }
 
 /*modal funtion--------------------------------------------------------------------------------------*/
+    var desp = document.querySelector('#desp')
+fetch(despiration)
+    .then(function (data) {
+      return data.json()
+    })
+    .then(function (data) {
+      console.log(data);
+
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent=(data.message + (" - Donald Trump"))
+      
+      desp.append(quoteLocation)
+    })
+}
+
 $(document).ready(function(){
     $('.modal').modal();
     $('.modal').modal('open')
   });
-
