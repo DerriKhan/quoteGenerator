@@ -6,32 +6,20 @@ var despireCard = document.querySelector('#despire-text')
 
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
-  var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"
-
-  fetch(jokeLight)
-    var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode"  
- fetch(jokeLight)
 var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
-var LJ = document.querySelector('#LJ')
 fetch(jokeLight)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
       console.log(data)
-      lightCard.textContent=((data.setup) + (" ") + (data.delivery))
-      
+      lightCard.textContent=((data.setup) + (" ") + (data.delivery))  
     })
 }
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
-  var jokeDark = "https://v2.jokeapi.dev/joke/Any"
-  fetch(jokeDark)
-    var jokeDark = "https://v2.jokeapi.dev/joke/Any?"
-    var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
-    var DJ = document.querySelector('#DJ')
-
+var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
 fetch(jokeDark)
     .then(function (response) {
       return response.json()
@@ -44,89 +32,50 @@ fetch(jokeDark)
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
-  var inspiration = "https://api.goprogram.ai/inspiration"
-  fetch(inspiration)
-    var inspiration = "https://api.goprogram.ai/inspiration"
+var inspiration = "https://api.goprogram.ai/inspiration"
 fetch(inspiration)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
       console.log(data)
-      inspireCard.textContent=((data.setup) + (" ") + (data.delivery))
-    var insp = document.querySelector('#insp')
-fetch(inspiration)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent=((data.quote) + (" ") + (data.author))
-      
-      insp.append(quoteLocation)
+      inspireCard.textContent= (data.quote)
     })
 }
 
 document.getElementById("despireButton").addEventListener("click", despire);
 function despire() {
-  var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
-  fetch(despiration)
-    var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
+var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
 fetch(despiration)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
-      despireCard.textContent=((data.setup) + (" ") + (data.delivery))
+      console.log(data)
+      despireCard.textContent= ((data.message) + ("  -Donald Trump"))
     })
 }
 
-/*modal funtion--------------------------------------------------------------------------------------*/
-    var desp = document.querySelector('#desp')
-fetch(despiration)
-    .then(function (data) {
-      return data.json()
-    })
-    .then(function (data) {
-      console.log(data);
-
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent=(data.message + (" - Donald Trump"))
-      
-      desp.append(quoteLocation)
-    })
-}
-console.log('linked');
 /*modal funtion--------------------------------------------------------------------------------------*/
 $(document).ready(function () {
   $('.modal').modal();
   $('.modal').modal('open')
 });
-
+/*----------------------------------------------------------------------------------------------------*/
 
 // changing theme by button section
-document.querySelector('#despireButton').addEventListener('click', () => {
-  document.querySelector('#despire-card').classList.add('dark-card');
-}); 
+// document.querySelector('#despireButton').addEventListener('click', () => {
+//   document.querySelector('#despire-card').classList.add('dark-card');
+// }); 
 
-document.querySelector('#darkButton').addEventListener('click', () => {
-  document.querySelector('#dark-card').classList.add('dark-card');
-}); 
+// document.querySelector('#darkButton').addEventListener('click', () => {
+//   document.querySelector('#dark-card').classList.add('dark-card');
+// }); 
 
-document.querySelector('#inspireButton').addEventListener('click', () => {
-  document.querySelector('#inspire-card').classList.add('light-card');
-}); 
+// document.querySelector('#inspireButton').addEventListener('click', () => {
+//   document.querySelector('#inspire-card').classList.add('light-card');
+// }); 
 
-document.querySelector('#lightButton').addEventListener('click', () => {
-  document.querySelector('#light-card').classList.add('light-card');
-}); 
-=======
-
-$(document).ready(function(){
-    $('.modal').modal();
-    $('.modal').modal('open')
-  });
+// document.querySelector('#lightButton').addEventListener('click', () => {
+//   document.querySelector('#light-card').classList.add('light-card');
+// }); 
