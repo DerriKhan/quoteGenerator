@@ -1,0 +1,110 @@
+/* DARK THEME */
+/* DARK*/
+/* #A60200 -- text red
+##E22C2C -- border red */
+/* DARK */
+/* font-family: 'Jolly Lodger', cursive;
+font-family: 'Pathway Gothic One', sans-serif; */
+
+
+/* body {
+    background-color: #201F1F;
+    background-image: url(./customization/Fire-Flames-High-Quality-PNG.png), url(./customization/fire-welding-sparks-png.png);
+    background-position: bottom, left;
+    width: 100%;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-family: 'Jolly Lodger', cursive;
+    padding: 0;
+}
+
+.fire {
+    display: inline-block;
+    margin: 0;
+    padding: 15px;
+    color: #A60200;
+    font-size: 70px;
+    line-height: 50px;
+    min-width: 50px;
+    outline: none;
+    vertical-align: middle;
+
+    text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -10px 30px yellow;
+    animation: 2s Blazing infinite alternate linear;
+}
+
+@keyframes Blazing {
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
+
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red,
+            0 0 20px orange,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow;
+    }
+
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            3px -5px 5px yellow,
+            -4px -10px 10px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5),
+            0px -25px 40px rgba(255, 255, 0, 0)
+    }
+
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
+}
+
+h2 {
+    font-size: medium;
+    font-family: 'Pathway Gothic One', sans-serif;
+    padding: 10px;
+}
+
+.text-bubble {
+    background-color: white;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: 80%;
+    height: 225px;
+    padding: 10px;
+    border-radius: 10px;
+    border: #E22C2C solid 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
