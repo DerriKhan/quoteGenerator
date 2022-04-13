@@ -14,7 +14,7 @@ body {
     background-position: bottom;
 }
 
-h1 {
+span {
     font-family: 'Meow Script', cursive;
     font-size: xxx-large;
     font-weight: bold;
@@ -60,7 +60,7 @@ h1 {
     }
 }
 
-h2 {
+p {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: medium;
 }
