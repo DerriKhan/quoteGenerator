@@ -62,9 +62,6 @@ $(document).ready(function () {
 });
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-// changing theme by button click
-
-
 // showing card on button click
 document.getElementById("lightButton").addEventListener("click", showLight);
 function showLight() {
@@ -72,7 +69,6 @@ function showLight() {
   if (lightCard.style.display === "none") {
     lightCard.style.display = "block";
   }
-  themeLight()
 }
 
 document.getElementById("darkButton").addEventListener("click", showDark);
@@ -81,7 +77,6 @@ function showDark() {
   if (darkCard.style.display === "none") {
     darkCard.style.display = "block";
   }
-  themeDark()
 }
 
 document.getElementById("inspireButton").addEventListener("click", showInspire);
@@ -90,7 +85,6 @@ function showInspire() {
   if (inspireCard.style.display === "none") {
     inspireCard.style.display = "block";
   }
-  themeInspire()
 }
 
 document.getElementById("despireButton").addEventListener("click", showDespire);
@@ -99,5 +93,17 @@ function showDespire() {
   if (despireCard.style.display === "none") {
     despireCard.style.display = "block";
   }
-  themeDespire()
+}
+
+function setFavorites() {
+  var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
+  var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
+  var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
+  var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
+
+  document.getElementById('fav-quote').value = lightFav
+  document.getElementById('fav-quote').value = darkFav
+  document.getElementById('fav-quotet').value = inspireFav
+  document.getElementById('fav-quote').value = despireFav
+  
 }
