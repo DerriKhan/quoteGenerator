@@ -63,33 +63,6 @@ $(document).ready(function () {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // changing theme by button click
-// document.getElementById("lightButton").addEventListener("click", themeLight);
-// function themeLight('css/light-theme.css') {
-//   $('#color_theme').attr("href", 'css/light-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
-// };
-
-// document.getElementById("darkButton").addEventListener("click", themeDark);
-// function themeDark('css/dark-theme.css') {
-//   $('#color_theme').attr("href", 'css/dark-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
-// };
-
-// document.getElementById('css/dark-theme.css').addEventListener("click", themeInspire);
-// function themeInspire('css/light-theme.css') {
-//   $('#color_theme').attr("href", 'css/light-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
-// };
-
-// document.getElementById("despireButton").addEventListener("click", themeDespire);
-// function themeDespire('css/dark-theme.css') {
-//   $('#color_theme').attr("href", 'css/dark-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
-// };
 
 
 // showing card on button click
@@ -99,6 +72,7 @@ function showLight() {
   if (lightCard.style.display === "none") {
     lightCard.style.display = "block";
   }
+  themeLight()
 }
 
 document.getElementById("darkButton").addEventListener("click", showDark);
@@ -107,6 +81,7 @@ function showDark() {
   if (darkCard.style.display === "none") {
     darkCard.style.display = "block";
   }
+  themeDark()
 }
 
 document.getElementById("inspireButton").addEventListener("click", showInspire);
@@ -115,6 +90,7 @@ function showInspire() {
   if (inspireCard.style.display === "none") {
     inspireCard.style.display = "block";
   }
+  themeInspire()
 }
 
 document.getElementById("despireButton").addEventListener("click", showDespire);
@@ -123,6 +99,7 @@ function showDespire() {
   if (despireCard.style.display === "none") {
     despireCard.style.display = "block";
   }
+  themeDespire()
 }
 
 function setFavorites() {
