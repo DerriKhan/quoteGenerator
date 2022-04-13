@@ -26,20 +26,20 @@ fetch(jokeDark)
     })
     .then(function (data) {
       console.log(data)
-      darkCard.textContent=((data.setup) + (" ") + (data.delivery))
+      darkCard.textContent=((data.setup) + (" ") + (data.delivery)) 
     })
 }
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
-var inspiration = "https://api.goprogram.ai/inspiration"
+    var inspiration = "https://api.goprogram.ai/inspiration"
 fetch(inspiration)
     .then(function (response) {
-      return response.json()
+      return response.json();
     })
     .then(function (data) {
-      console.log(data)
-      inspireCard.textContent= (data.quote)
+      console.log(data);
+      inspireCard.textContent=((data.quote) + (" ") + (data.author)) 
     })
 }
 
@@ -64,18 +64,18 @@ $(document).ready(function () {
 /*----------------------------------------------------------------------------------------------------*/
 
 // changing theme by button section
-// document.querySelector('#despireButton').addEventListener('click', () => {
-//   document.querySelector('#despire-card').classList.add('dark-card');
-// }); 
+document.querySelector('#despireButton').addEventListener('click', () => {
+  document.querySelector('#despire-card').classList.add('dark-card');
+}); 
 
-// document.querySelector('#darkButton').addEventListener('click', () => {
-//   document.querySelector('#dark-card').classList.add('dark-card');
-// }); 
+document.querySelector('#darkButton').addEventListener('click', () => {
+  document.querySelector('#dark-card').classList.add('dark-card');
+}); 
 
-// document.querySelector('#inspireButton').addEventListener('click', () => {
-//   document.querySelector('#inspire-card').classList.add('light-card');
-// }); 
+document.querySelector('#lightButton').addEventListener('click', () => {
+  document.querySelector('#light-card').classList.add('light-card');
+});
 
-// document.querySelector('#lightButton').addEventListener('click', () => {
-//   document.querySelector('#light-card').classList.add('light-card');
-// }); 
+document.querySelector('#lightButton').addEventListener('click', () => {
+  document.querySelector('#light-card').classList.add('light-card');
+});
