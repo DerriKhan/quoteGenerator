@@ -1,9 +1,10 @@
+/*card id's grabbed and turned into variables--------------------------------------------------------------------------------------------------------------------------------------------*/
 var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
 
-
+/*when button gets clicked quote will pop up in correspondig cards-----------------------------------------------------------------------------------------------------------------------*/
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
 var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
@@ -13,12 +14,7 @@ fetch(jokeLight)
     })
     .then(function (data) {
       console.log(data)
-
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
-
-      LJ.append(quoteLocation)
+      lightCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
@@ -31,27 +27,19 @@ fetch(jokeDark)
     })
     .then(function (data) {
       console.log(data)
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
-
-      DJ.append(quoteLocation)
+      darkCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
-    var inspiration = "https://api.goprogram.ai/inspiration"
+var inspiration = "https://api.goprogram.ai/inspiration"
 fetch(inspiration)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
-
-      insp.append(quoteLocation)
+      inspireCard.textContent = ((data.quote) + (" ") + (data.author))
     })
 }
 
@@ -63,20 +51,16 @@ fetch(despiration)
       return response.json()
     })
     .then(function (data) {
-      var quoteLocation = document.createElement('p')
-
-      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
-
-      desp.append(quoteLocation)
+      despireCard.textContent = ((data.message) + ("  -Donald Trump"))
     })
 }
 
-/*modal funtion--------------------------------------------------------------------------------------*/
+/*modal funtion---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 $(document).ready(function () {
   $('.modal').modal();
   $('.modal').modal('open')
 });
-/*----------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // changing theme by button click
 // document.getElementById("lightButton").addEventListener("click", themeLight);
