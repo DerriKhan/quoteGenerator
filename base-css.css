@@ -18,3 +18,17 @@ span {
 p {
     font-family: 'Xanh Mono', monospace;
 }
+
+#btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    background-color: rgb(189, 203, 218);
+}
