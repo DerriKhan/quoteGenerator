@@ -8,9 +8,8 @@
 font-family: 'Meow Script', cursive; */
 
 
-/* body {
+body {
     background-color: #36B5F3;
-    position: absolute;
     background-image: url(./customization/pngkey.com-clouds-png-14969.png);
     background-position: bottom;
 }
@@ -30,13 +29,13 @@ h1 {
         0 0 92px #F2E436,
         0 0 102px #F2E436,
         0 0 151px #F2E436;
-} */
+}
 
 /* Flickering animation */
-/* @keyframes pulsate {
-    100% { */
-/* Larger blur radius */
-/* text-shadow:
+@keyframes pulsate {
+    100% {
+        /* Larger blur radius */
+        text-shadow:
             0 0 4px #F2E436,
             0 0 11px #F2E436,
             0 0 19px #F2E436,
@@ -49,7 +48,7 @@ h1 {
 
     0% {
         /* Smaller blur radius */
-/* text-shadow:
+        text-shadow:
             0 0 2px #F2E436,
             0 0 4px #F2E436,
             0 0 6px #F2E436,
@@ -59,8 +58,8 @@ h1 {
             0 0 70px #F2E436,
             0 0 80px #F2E436;
     }
-} */
-/* 
+}
+
 h2 {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: medium;
@@ -105,4 +104,4 @@ h2 {
         -28px -6px 0 -2px #fff,
         -24px 17px 0 -6px #fff,
         -5px 25px 0 -10px #fff;
-}  */
+}

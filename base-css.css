@@ -1,5 +1,20 @@
 /* THEME ITEMS */
 /* -----FONTS----- */
+/* font-family: 'Bungee Inline', cursive;
+font-family: 'Xanh Mono', monospace; */
 /*-----COLORS----- */
 
 /* DEFAULT THEME */
+body {
+    background-image: url(./customization/815521_tv-test-pattern-abstract-2560x1600-hd-wallpapers-and-free-stock-photo_2560x1600_h.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span {
+    font-family: 'Bungee Inline', cursive;
+}
+
+p {
+    font-family: 'Xanh Mono', monospace;
+}
