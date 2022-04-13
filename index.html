@@ -36,77 +36,89 @@
         </div>
     </container> -->
 
-  <div class="row" style="display: none;" id="light-card">
-    <div class="col s12 m6">
-      <div class="card" class="light-card" class="text-bubble">
-        <div class="card-content">
-          <span class="card-title" id="light-title">Light</span>
-          <p id="light-text"></p>
+
+    <div class="row col s12 m6">
+      <div class="col s3" style="display: none;" id="light-card">
+        <div class="col s12 ">
+          <div class="card" class="light-card" class="text-bubble">
+            <div class="card-content">
+              <span class="card-title" id="light-title">Light</span>
+              <p id="light-txt"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
+          </div>
+
         </div>
-        <div class="card-action">
-          <a href="#">Save</a>
+      </div>
+
+      <div class="col s3" style="display: none;" id="dark-card">
+        <div class="col s12">
+          <div class="card" class="dark-card" class="box-bubble">
+            <div class="card-content">
+              <span class="card-title" id="fire" id="dark-title">Dark</span>
+              <p id="dark-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col s3" style="display: none;" id="inspire-card">
+        <div class="col s12">
+          <div class="card" class="light-card" class="text-bubble">
+            <div class="card-content">
+              <span class="card-title" id="inspire-title">Inspire</span>
+              <p id="inspire-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3" style="display: none;" id="despire-card">
+        <div class="col s12">
+          <div class="card" class="dark-card" class="box-bubble">
+            <div class="card-content">
+              <span class="card-title" id="fire" id="despire-title">Despire</span>
+              <p id="despire-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="row" style="display: none;" id="dark-card">
-    <div class="col s12 m6">
-      <div class="card" class="dark-card" class="box-bubble">
-        <div class="card-content">
-          <span class="card-title" id="fire" id="dark-title">Dark</span>
-          <p id="dark-text"></p>
-        </div>
-        <div class="card-action">
-          <a href="#">Save</a>
-        </div>
+  <aside>
+    <h1>Choose your path</h1>
+      <div class="row" id="btns">
+        <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
+        <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
+        <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
+        <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
       </div>
-    </div>
-  </div>
 
-  <div class="row" style="display: none;" id="inspire-card">
-    <div class="col s12 m6">
-      <div class="card" class="light-card" class="text-bubble">
-        <div class="card-content">
-          <span class="card-title" id="inspire-title">Inspire</span>
-          <p id="inspire-text"></p>
-        </div>
-        <div class="card-action">
-          <a href="#">Save</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    <br><br>
 
-  <div class="row" style="display: none;" id="despire-card">
-    <div class="col s12 m6">
-      <div class="card" class="dark-card" class="box-bubble">
-        <div class="card-content">
-          <span class="card-title" id="fire" id="despire-title">Despire</span>
-          <p id="despire-text"></p>
-        </div>
-        <div class="card-action">
-          <a href="#">Save</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h1>Choose your path</h1>
-  <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
-  <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
-  <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
-  <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
-  <div id="LJ"></div>
-  <div id="DJ"></div>
-  <div id="insp"></div>
-  <div id="desp"></div>
+    <ul id="fav-quote" class="collection container col s12 m6">
+      <li class="collection-item"></li>
+      <li class="collection-item"></li>
+      <li class="collection-item"></li>
+      <li class="collection-item"></li>
+    </ul>
+  </aside>
 
 
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
+  <!-- modal------------------------------------------------------------------------------------------------------------------- -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Quote Generator</h4>
@@ -122,14 +134,6 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
     </div>
   </div>
-
-
-  <ul id="fav-quote" class="collection container col s12 m6">
-    <li class="collection-item"></li>
-    <li class="collection-item"></li>
-    <li class="collection-item"></li>
-    <li class="collection-item"></li>
-  </ul>
 </body>
 
 <script>
