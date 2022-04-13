@@ -124,3 +124,16 @@ function showDespire() {
     despireCard.style.display = "block";
   }
 }
+
+function setFavorites() {
+  var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
+  var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
+  var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
+  var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
+
+  document.getElementById('fav-quote').value = lightFav
+  document.getElementById('fav-quote').value = darkFav
+  document.getElementById('fav-quotet').value = inspireFav
+  document.getElementById('fav-quote').value = despireFav
+  
+}
