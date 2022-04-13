@@ -79,33 +79,7 @@ $(document).ready(function () {
 /*----------------------------------------------------------------------------------------------------*/
 
 // changing theme by button click
-// document.getElementById("lightButton").addEventListener("click", themeLight);
-// function themeLight('css/light-theme.css') {
-//   $('#color_theme').attr("href", 'css/light-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
-// };
 
-// document.getElementById("darkButton").addEventListener("click", themeDark);
-// function themeDark('css/dark-theme.css') {
-//   $('#color_theme').attr("href", 'css/dark-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
-// };
-
-// document.getElementById('css/dark-theme.css').addEventListener("click", themeInspire);
-// function themeInspire('css/light-theme.css') {
-//   $('#color_theme').attr("href", 'css/light-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
-// };
-
-// document.getElementById("despireButton").addEventListener("click", themeDespire);
-// function themeDespire('css/dark-theme.css') {
-//   $('#color_theme').attr("href", 'css/dark-theme.css');
-//   document.getElementById('color_theme').removeAttribute('href');
-//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
-// };
 
 
 // showing card on button click
