@@ -13,7 +13,12 @@ fetch(jokeLight)
     })
     .then(function (data) {
       console.log(data)
-      lightCard.textContent=((data.setup) + (" ") + (data.delivery))  
+
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
+
+      LJ.append(quoteLocation)
     })
 }
 
@@ -26,7 +31,11 @@ fetch(jokeDark)
     })
     .then(function (data) {
       console.log(data)
-      darkCard.textContent=((data.setup) + (" ") + (data.delivery)) 
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
+
+      DJ.append(quoteLocation)
     })
 }
 
@@ -38,8 +47,11 @@ fetch(inspiration)
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-      inspireCard.textContent=((data.quote) + (" ") + (data.author)) 
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
+
+      insp.append(quoteLocation)
     })
 }
 
@@ -51,8 +63,11 @@ fetch(despiration)
       return response.json()
     })
     .then(function (data) {
-      console.log(data)
-      despireCard.textContent= ((data.message) + ("  -Donald Trump"))
+      var quoteLocation = document.createElement('p')
+
+      quoteLocation.textContent = ((data.setup) + (" ") + (data.delivery))
+
+      desp.append(quoteLocation)
     })
 }
 
@@ -63,19 +78,65 @@ $(document).ready(function () {
 });
 /*----------------------------------------------------------------------------------------------------*/
 
-// changing theme by button section
-document.querySelector('#despireButton').addEventListener('click', () => {
-  document.querySelector('#despire-card').classList.add('dark-card');
-}); 
+// changing theme by button click
+// document.getElementById("lightButton").addEventListener("click", themeLight);
+// function themeLight('css/light-theme.css') {
+//   $('#color_theme').attr("href", 'css/light-theme.css');
+//   document.getElementById('color_theme').removeAttribute('href');
+//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
+// };
 
-document.querySelector('#darkButton').addEventListener('click', () => {
-  document.querySelector('#dark-card').classList.add('dark-card');
-}); 
+// document.getElementById("darkButton").addEventListener("click", themeDark);
+// function themeDark('css/dark-theme.css') {
+//   $('#color_theme').attr("href", 'css/dark-theme.css');
+//   document.getElementById('color_theme').removeAttribute('href');
+//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
+// };
 
-document.querySelector('#lightButton').addEventListener('click', () => {
-  document.querySelector('#light-card').classList.add('light-card');
-});
+// document.getElementById('css/dark-theme.css').addEventListener("click", themeInspire);
+// function themeInspire('css/light-theme.css') {
+//   $('#color_theme').attr("href", 'css/light-theme.css');
+//   document.getElementById('color_theme').removeAttribute('href');
+//   document.getElementById('color_theme').setAttribute('href', 'css/light-theme.css');
+// };
 
-document.querySelector('#lightButton').addEventListener('click', () => {
-  document.querySelector('#light-card').classList.add('light-card');
-});
+// document.getElementById("despireButton").addEventListener("click", themeDespire);
+// function themeDespire('css/dark-theme.css') {
+//   $('#color_theme').attr("href", 'css/dark-theme.css');
+//   document.getElementById('color_theme').removeAttribute('href');
+//   document.getElementById('color_theme').setAttribute('href', 'css/dark-theme.css');
+// };
+
+
+// showing card on button click
+document.getElementById("lightButton").addEventListener("click", showLight);
+function showLight() {
+  var lightCard = document.getElementById("light-card");
+  if (lightCard.style.display === "none") {
+    lightCard.style.display = "block";
+  }
+}
+
+document.getElementById("darkButton").addEventListener("click", showDark);
+function showDark() {
+  var darkCard = document.getElementById("dark-card");
+  if (darkCard.style.display === "none") {
+    darkCard.style.display = "block";
+  }
+}
+
+document.getElementById("inspireButton").addEventListener("click", showInspire);
+function showInspire() {
+  var inspireCard = document.getElementById("inspire-card");
+  if (inspireCard.style.display === "none") {
+    inspireCard.style.display = "block";
+  }
+}
+
+document.getElementById("despireButton").addEventListener("click", showDespire);
+function showDespire() {
+  var despireCard = document.getElementById("despire-card");
+  if (despireCard.style.display === "none") {
+    despireCard.style.display = "block";
+  }
+}
