@@ -105,3 +105,15 @@ p {
         -24px 17px 0 -6px #fff,
         -5px 25px 0 -10px #fff;
 }
+
+.material-icons:hover {
+    text-shadow:  5px 5px 5px rgb(255, 255, 143);
+}
+
+.material-icons {
+    color: rgb(194, 142, 0);
+}
+
+#slide-out {
+    background-color: rgb(224, 251, 255); 
+ }

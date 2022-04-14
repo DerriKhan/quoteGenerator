@@ -32,3 +32,20 @@ h1 {
 aside {
     background-color: rgb(189, 203, 218);
 }
+
+.background {
+    display: flex;
+    justify-content: center;
+}
+
+#slide-out {
+   background-color: blueviolet; 
+}
+
+.material-icons {
+    color: black;
+}
+
+.material-icons:hover {
+     text-shadow:  5px 5px 5px rgb(255, 255, 143);
+}
