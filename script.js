@@ -78,6 +78,8 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
 });
 
+// user video function????
+
 // cards are displayed when clicked and hide other cards that are currently visible
 document.getElementById("lightButton").addEventListener("click", showLight);
 function showLight() {
