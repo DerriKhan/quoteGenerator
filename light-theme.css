@@ -1,8 +1,4 @@
 /* LIGHT THEME */
-/*-----COLORS----- */
-/* LIGHT*/
-/* #F2E436 -- yellow
-#36B5F3 -- blue */
 /* LIGHT */
 /* font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Meow Script', cursive; */
@@ -15,8 +11,14 @@ body {
 }
 
 h1 {
-    font-family: 'Meow Script', cursive;
+    display: none;
+}
+
+#neon {
     font-size: xxx-large;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Meow Script', cursive;
     font-weight: bold;
     animation: pulsate 1.5s infinite alternate;
     color: #fff;
@@ -60,48 +62,105 @@ h1 {
     }
 }
 
-h2 {
+p {
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: medium;
-}
-
-.text-bubble {
-    display: flex;
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 30px;
-    margin: 20px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
-.text-bubble:before,
-.text-bubble:after {
-    content: "";
+.card-action {
+    text-align: center;
+}
+
+#save {
+    margin: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+    background-image: linear-gradient(-225deg,
+            #FFD60E 0%,
+            #66DF0E 29%,
+            #0EA3DF 67%,
+            #0E6ADF 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#text-bubble {
+    width: fit-content;
     background-color: #fff;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    z-index: -1;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    border: #FFD60E solid 7px;
 }
 
-.text-bubble:before {
-    width: 44px;
-    height: 44px;
-    top: -12px;
-    left: 28px;
-    box-shadow: -50px 30px 0 -12px #fff;
+.material-icons:hover {
+    text-shadow: 5px 5px 5px rgb(255, 255, 143);
 }
 
-.text-bubble:after {
-    bottom: -10px;
-    right: 26px;
-    width: 30px;
-    height: 30px;
-    box-shadow: 40px -34px 0 0 #fff,
-        -28px -6px 0 -2px #fff,
-        -24px 17px 0 -6px #fff,
-        -5px 25px 0 -10px #fff;
+.material-icons {
+    color: #EAC441;
+}
+
+h4 {
+    font-family: 'Bungee Inline', cursive;
+}
+
+#slide-out {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#lightButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#darkButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#inspireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#despireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }

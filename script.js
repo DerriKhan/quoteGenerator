@@ -1,116 +1,259 @@
-/*card id's grabbed and turned into variables--------------------------------------------------------------------------------------------------------------------------------------------*/
+// card ids but variable versions
 var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
+var saveButton = document.getElementById('save')
+var saveButton2 = document.getElementById('save2')
+var saveButton3 = document.getElementById('save3')
+var saveButton4 = document.getElementById('save4')
+var quoteText = ("")
+var saved = document.querySelector("#fav-quote")
 
-/*when button gets clicked quote will pop up in correspondig cards-----------------------------------------------------------------------------------------------------------------------*/
+var despireBox = document.getElementById("despire-card")
+var inspireBox = document.getElementById("inspire-card")
+var darkBox = document.getElementById("dark-card")
+var lightBox = document.getElementById("light-card")
+
+
+// puts joke in corresponding cards on button click
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
-var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
-fetch(jokeLight)
+  var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
+  fetch(jokeLight)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
       console.log(data)
-      lightCard.textContent = ((data.setup) + (" ") + (data.delivery))
+      quoteText = lightCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
-var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
-fetch(jokeDark)
+  var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
+  fetch(jokeDark)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
       console.log(data)
-      darkCard.textContent = ((data.setup) + (" ") + (data.delivery))
+      quoteText = darkCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
-var inspiration = "https://api.goprogram.ai/inspiration"
-fetch(inspiration)
+  var inspiration = "https://api.goprogram.ai/inspiration"
+  fetch(inspiration)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      inspireCard.textContent = ((data.quote) + (" ") + (data.author))
+     quoteText = inspireCard.textContent = ((data.quote) + (" ") + (data.author))
     })
 }
 
 document.getElementById("despireButton").addEventListener("click", despire);
 function despire() {
-var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
-fetch(despiration)
+  var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
+  fetch(despiration)
     .then(function (response) {
       return response.json()
     })
     .then(function (data) {
-      despireCard.textContent = ((data.message) + ("  -Donald Trump"))
+     quoteText = despireCard.textContent = ((data.message) + ("  -Donald Trump"))
     })
 }
 
-/*modal funtion---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+// modal function
+// $(document).ready(function () {
+//   $('.modal').modal();
+//   $('.modal').modal('open')
+// });
+
+// side nav function
 $(document).ready(function () {
-  $('.modal').modal();
-  $('.modal').modal('open')
+  $('.sidenav').sidenav();
 });
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-// changing theme by button click
-
-
-// showing card on button click
+// cards are displayed when clicked and hide other cards that are currently visible
 document.getElementById("lightButton").addEventListener("click", showLight);
 function showLight() {
-  var lightCard = document.getElementById("light-card");
-  if (lightCard.style.display === "none") {
-    lightCard.style.display = "block";
-  }
-  themeLight()
+  lightBox.style.display = "block"
+  darkBox.style.display = "none"
+  inspireBox.style.display = "none"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("darkButton").addEventListener("click", showDark);
 function showDark() {
-  var darkCard = document.getElementById("dark-card");
-  if (darkCard.style.display === "none") {
-    darkCard.style.display = "block";
-  }
-  themeDark()
+  darkBox.style.display = "block"
+  lightBox.style.display = "none"
+  inspireBox.style.display = "none"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("inspireButton").addEventListener("click", showInspire);
 function showInspire() {
-  var inspireCard = document.getElementById("inspire-card");
-  if (inspireCard.style.display === "none") {
-    inspireCard.style.display = "block";
-  }
-  themeInspire()
+  darkBox.style.display = "none"
+  lightBox.style.display = "none"
+  inspireBox.style.display = "block"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("despireButton").addEventListener("click", showDespire);
 function showDespire() {
-  var despireCard = document.getElementById("despire-card");
-  if (despireCard.style.display === "none") {
-    despireCard.style.display = "block";
-  }
-  themeDespire()
+  darkBox.style.display = "none"
+  lightBox.style.display = "none";
+  inspireBox.style.display = "none"
+  despireBox.style.display = "block"
 }
 
-function setFavorites() {
-  var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
-  var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
-  var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
-  var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
+// setting favorite jokes to local storage
 
-  document.getElementById('fav-quote').value = lightFav
-  document.getElementById('fav-quote').value = darkFav
-  document.getElementById('fav-quotet').value = inspireFav
-  document.getElementById('fav-quote').value = despireFav
-  
-}
+// function setFavorites() {
+//   var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
+//   var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
+//   var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
+//   var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
+
+//   document.getElementById('fav-quote').value = lightFav
+//   document.getElementById('fav-quote').value = darkFav
+//   document.getElementById('fav-quotet').value = inspireFav
+//   document.getElementById('fav-quote').value = despireFav
+// }
+
+/*function to display quote in card---------------------------------------------------------------------------------------------*/
+// var displayQuote = document.querySelector("#light-text")
+// displayQuote.addEventListener("click", function(){
+//   fetch(quoteText)
+//   .then(function (response) {
+//     return response.json()
+//   })
+//   .then(function (quoteText) {
+//     console.log(quoteText)
+    // quoteText = display.quoteText= (data.quote)
+//   })
+// })
+/*save button function---------------------------------------------------------------------------------------------------------*/
+  saveButton.addEventListener("click", function(){
+    console.log("clicked")
+    // localStorage.setItem('text', quoteText)
+    /*favorite quote array layout------------------------*/
+        var favorite = {
+            quoteType: "light",
+            quote: quoteText
+          }
+          console.log(favorite)
+    /*we add favorite quote into array favorites---------*/
+        var favorites = localStorage.getItem("favorites")
+        if (favorites === null) {
+          favorites = [];
+        }
+        else {
+          favorites = JSON.parse(favorites);
+        }
+    /*we push our favorite quote into favorites--------------*/
+        favorites.push(favorite)
+    /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+        var allFavorites = JSON.stringify(favorites)
+        favorites = (localStorage.getItem("favorites"))
+        localStorage.setItem("favorites", allFavorites);
+        localStorage.setItem("quote", quoteText)
+    /*list element dynamically created and with each saved quote the list will grow*/
+        var savedLocation = document.createElement('li')
+        savedLocation.textContent = (localStorage.getItem("quote"))
+        saved.append(savedLocation)
+})
+
+saveButton2.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
+})
+
+saveButton3.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
+})
+
+saveButton4.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
+})
