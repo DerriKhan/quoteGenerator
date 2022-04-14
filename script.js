@@ -3,8 +3,10 @@ var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
-
 var saveButton = document.getElementById('save')
+var saveButton2 = document.getElementById('save2')
+var saveButton3 = document.getElementById('save3')
+var saveButton4 = document.getElementById('save4')
 var quoteText = ("")
 var saved = document.querySelector("#fav-quote")
 
@@ -144,6 +146,7 @@ function showDespire() {
             quoteType: "light",
             quote: quoteText
           }
+          console.log(favorite)
     /*we add favorite quote into array favorites---------*/
         var favorites = localStorage.getItem("favorites")
         if (favorites === null) {
@@ -163,4 +166,94 @@ function showDespire() {
         var savedLocation = document.createElement('li')
         savedLocation.textContent = (localStorage.getItem("quote"))
         saved.append(savedLocation)
+})
+
+saveButton2.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
+})
+
+saveButton3.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
+})
+
+saveButton4.addEventListener("click", function(){
+  console.log("clicked")
+  // localStorage.setItem('text', quoteText)
+  /*favorite quote array layout------------------------*/
+      var favorite = {
+          quoteType: "light",
+          quote: quoteText
+        }
+        console.log(favorite)
+  /*we add favorite quote into array favorites---------*/
+      var favorites = localStorage.getItem("favorites")
+      if (favorites === null) {
+        favorites = [];
+      }
+      else {
+        favorites = JSON.parse(favorites);
+      }
+  /*we push our favorite quote into favorites--------------*/
+      favorites.push(favorite)
+  /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+      var allFavorites = JSON.stringify(favorites)
+      favorites = (localStorage.getItem("favorites"))
+      localStorage.setItem("favorites", allFavorites);
+      localStorage.setItem("quote", quoteText)
+  /*list element dynamically created and with each saved quote the list will grow*/
+      var savedLocation = document.createElement('li')
+      savedLocation.textContent = (localStorage.getItem("quote"))
+      saved.append(savedLocation)
 })
