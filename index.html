@@ -39,11 +39,13 @@
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">star</i></a>
 
   <!-- heading -->
-  <h1>Choose your path</h1>
+  <header class="row">
+    <h1 class="col s12 m12">Choose your path</h1>
+  </header>
 
   <!-- cards for jokes -->
-  <div class="row col s12 m6">
-    <div class="col s3" style="display: none;" id="light-card">
+  <div class="row">
+    <div class="col s6" style="display: none;" id="light-card">
       <div class="col s12 ">
         <div class="card" class="light-card" id="text-bubble">
           <div class="card-content">
@@ -59,7 +61,7 @@
     </div>
   </div>
 
-  <div class="col s3" style="display: none;" id="dark-card">
+  <div class="col s6" style="display: none;" id="dark-card">
     <div class="col s12">
       <div class="card" class="dark-card" id="box-bubble">
         <div class="card-content">
@@ -73,7 +75,7 @@
     </div>
 
 
-    <div class="col s3" style="display: none;" id="inspire-card">
+    <div class="col s6" style="display: none;" id="inspire-card">
       <div class="col s12">
         <div class="card" class="light-card" id="text-bubble">
           <div class="card-content">
@@ -90,7 +92,7 @@
   </div>
 
 
-  <div class="col s3" style="display: none;" id="despire-card">
+  <div class="col s6" style="display: none;" id="despire-card">
     <div class="col s12">
       <div class="card" class="dark-card" id="box-bubble">
         <div class="card-content">
@@ -107,10 +109,10 @@
   <!-- buttons -->
   <aside id="gradient">
     <div class="row" id="btns">
-      <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
-      <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
-      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
-      <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
+      <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')"><img src="./customization/pig-angel.png" width="110px" height="100px"></a></button>
+      <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')"><img src="./customization/pig-devil.png" width="100px" height="100px"></button>
+      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')"><img src="./customization/bear-angel.png" width="110px" height="100px"></button>
+      <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')"><img src="./customization/bear-devil.png" width="100px" height="100px"></button>
     </div>
   </aside>
 
