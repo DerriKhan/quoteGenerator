@@ -99,17 +99,6 @@ p {
     }
 }
 
-.card {
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    -moz-transform: translate(-50%, -50%)
-    -webkit-transform: translate(-50%, -50%)
-    -ms-transform: translate(-50%, -50%)
-    -o-transform: translate(-50%, -50%)
-    transform: translate(-50%, -50%); */
-}
-
 #text-bubble {
     width: fit-content;
     background-color: #fff;
@@ -150,4 +139,28 @@ h4 {
     100% {
         background-position: 0% 50%;
     }
+}
+
+#lightButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#darkButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#inspireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#despireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }

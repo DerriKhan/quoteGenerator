@@ -170,3 +170,27 @@ h4 {
         background-position: 0% 50%;
     }
 }
+
+#lightButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#darkButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#inspireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#despireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}

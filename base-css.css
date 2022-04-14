@@ -54,6 +54,30 @@ font-family: 'Xanh Mono', monospace; */
     }
 }
 
+#lightButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#darkButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#inspireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#despireButton {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
 #btns {
     display: flex;
     justify-content: space-evenly;
