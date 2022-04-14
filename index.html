@@ -17,17 +17,35 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body id="gradient">
-  <div class="row col s12 m6">
-    <div class="col s3" style="display: none;" id="light-card">
-      <div class="col s12 ">
-        <div class="card" class="light-card" id="text-bubble">
-          <div class="card-content">
-            <span class="card-title" id="light-title">Light</span>
-            <p id="light-txt"></p>
-          </div>
-          <div class="card-action">
-            <a href="#">Save</a>
+<body>
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background" id="nav-bar">
+      </div>
+        <h4>Welcome To Your Favorites</h4>
+        <br><br>
+        <ul id="fav-quote" class="collection container col">
+          <!-- list elements for favorites here -->
+        </ul>
+        <br><br> 
+        <button id="clear-btn">Clear Favorites</button>
+      </div>
+    </li>
+  </ul>
+  
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">star</i></a>
+
+    <div class="row col s12 m6">
+      <div class="col s3" style="display: none;" id="light-card">
+        <div class="col s12 ">
+          <div class="card" class="light-card" class="text-bubble">
+            <div class="card-content">
+              <span class="card-title" id="light-title">Light</span>
+              <p id="light-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
           </div>
         </div>
 
@@ -41,8 +59,20 @@
             <span class="card-title" id="fire" id="dark-title">Dark</span>
             <p id="dark-text"></p>
           </div>
-          <div class="card-action">
-            <a href="#">Save</a>
+        </div>
+      </div>
+
+
+      <div class="col s3" style="display: none;" id="inspire-card">
+        <div class="col s12">
+          <div class="card" class="light-card" class="text-bubble">
+            <div class="card-content">
+              <span class="card-title" id="inspire-title">Inspire</span>
+              <p id="inspire-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="#">Save</a>
+            </div>
           </div>
         </div>
 
@@ -64,38 +94,14 @@
       </div>
     </div>
 
-    <div class="col s3" style="display: none;" id="despire-card">
-      <div class="col s12">
-        <div class="card" class="dark-card" id="box-bubble">
-          <div class="card-content">
-            <span class="card-title" id="fire" id="despire-title">Despire</span>
-            <p id="despire-text"></p>
-          </div>
-          <div class="card-action">
-            <a href="#">Save</a>
-          </div>
-        </div>
-
+  <aside>
+    <h1>Choose your path</h1>
+      <div class="row" id="btns">
+        <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
+        <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
+        <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
+        <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
       </div>
-    </div>
-  </div>
-  <aside id="gradient">
-    <h1 id="gradient">Choose your path</h1>
-    <div id="gradient" class="row" id="btns" class="button-area">
-      <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
-      <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
-      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
-      <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
-    </div>
-
-    <br><br>
-
-    <ul id="fav-quote" class="collection container col s12 m6">
-      <li class="collection-item"></li>
-      <li class="collection-item"></li>
-      <li class="collection-item"></li>
-      <li class="collection-item"></li>
-    </ul>
   </aside>
 
 
@@ -115,6 +121,8 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
     </div>
   </div>
+
+
 </body>
 
 <script>

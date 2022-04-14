@@ -109,3 +109,15 @@ p {
     justify-content: center;
     text-align: center;
 }
+
+.material-icons:hover {
+    text-shadow:  5px 5px 5px rgb(255, 53, 53);
+}
+
+.material-icons {
+    color: rgb(110, 75, 69);
+}
+
+#slide-out {
+    background-color: rgb(99, 37, 37); 
+ }
