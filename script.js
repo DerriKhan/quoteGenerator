@@ -3,6 +3,9 @@ var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
+var saveButton = document.getElementById('save')
+var quoteText = ("")
+var saved = document.querySelector("#fav-quote")
 
 // puts joke in corresponding cards on button click
 document.getElementById("lightButton").addEventListener("click", lightJoke);
@@ -14,7 +17,7 @@ function lightJoke() {
     })
     .then(function (data) {
       console.log(data)
-      lightCard.textContent = ((data.setup) + (" ") + (data.delivery))
+      lightCard.quoteText = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
@@ -56,10 +59,10 @@ function despire() {
 }
 
 // modal function
-$(document).ready(function () {
-  $('.modal').modal();
-  $('.modal').modal('open')
-});
+// $(document).ready(function () {
+//   $('.modal').modal();
+//   $('.modal').modal('open')
+// });
 
 // side nav function
 $(document).ready(function () {
@@ -108,15 +111,56 @@ function showDespire() {
 }
 
 // setting favorite jokes to local storage
-function setFavorites() {
-  var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
-  var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
-  var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
-  var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
 
-  document.getElementById('fav-quote').value = lightFav
-  document.getElementById('fav-quote').value = darkFav
-  document.getElementById('fav-quotet').value = inspireFav
-  document.getElementById('fav-quote').value = despireFav
+// function setFavorites() {
+//   var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
+//   var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
+//   var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
+//   var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
 
-}
+//   document.getElementById('fav-quote').value = lightFav
+//   document.getElementById('fav-quote').value = darkFav
+//   document.getElementById('fav-quotet').value = inspireFav
+//   document.getElementById('fav-quote').value = despireFav
+// }
+
+/*function to display quote in card---------------------------------------------------------------------------------------------*/
+var displayQuote = document.querySelector("#light-text")
+displayQuote.addEventListener("click", function(){
+  fetch(quoteText)
+  .then(function (response) {
+    return response.json()
+  })
+  .then(function (quoteText) {
+    console.log(quoteText)
+    quoteText = display.quoteText= (data.quote)
+  })
+})
+/*save button function---------------------------------------------------------------------------------------------------------*/
+  saveButton.addEventListener("click", function(){
+    localStorage.setItem('text', quoteText)
+    /*favorite quote array layout------------------------*/
+        var favorite = {
+            quoteType: "light",
+            quote: quoteText
+          }
+    /*we add favorite quote into array favorites---------*/
+        var favorites = localStorage.getItem("favorites")
+        if (favorites === null) {
+          favorites = [];
+        }
+        else {
+          favorites = JSON.parse('favorites');
+        }
+    /*we push our favorite quote into favorites--------------*/
+        favorites.push(favorite)
+    /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
+        var allFavorites = JSON.stringify(favorites)
+        favorites = (localStorage.getItem("favorites"))
+        localStorage.setItem("favorites", allFavorites);
+        localStorage.setItem("quote", quoteText)
+    /*list element dynamically created and with each saved quote the list will grow*/
+        var savedLocation = document.createElement('li')
+        savedLocation.quoteText = (localStorage.getItem("quote"))
+        saved.append(savedLocation)
+})
