@@ -62,9 +62,8 @@ font-family: 'Xanh Mono', monospace; */
 
 h1 {
     font-family: 'Bungee Inline', cursive;
-    position: absolute;
-    top: -25px;
-    right: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 aside {
