@@ -1,14 +1,14 @@
-/*card id's grabbed and turned into variables--------------------------------------------------------------------------------------------------------------------------------------------*/
+// card ids but variable versions
 var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
 
-/*when button gets clicked quote will pop up in correspondig cards-----------------------------------------------------------------------------------------------------------------------*/
+// puts joke in corresponding cards on button click
 document.getElementById("lightButton").addEventListener("click", lightJoke);
 function lightJoke() {
-var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
-fetch(jokeLight)
+  var jokeLight = "https://v2.jokeapi.dev/joke/Any?safe-mode&type=twopart"
+  fetch(jokeLight)
     .then(function (response) {
       return response.json()
     })
@@ -20,8 +20,8 @@ fetch(jokeLight)
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
-var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
-fetch(jokeDark)
+  var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
+  fetch(jokeDark)
     .then(function (response) {
       return response.json()
     })
@@ -33,8 +33,8 @@ fetch(jokeDark)
 
 document.getElementById("inspireButton").addEventListener("click", inspire);
 function inspire() {
-var inspiration = "https://api.goprogram.ai/inspiration"
-fetch(inspiration)
+  var inspiration = "https://api.goprogram.ai/inspiration"
+  fetch(inspiration)
     .then(function (response) {
       return response.json();
     })
@@ -45,8 +45,8 @@ fetch(inspiration)
 
 document.getElementById("despireButton").addEventListener("click", despire);
 function despire() {
-var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
-fetch(despiration)
+  var despiration = "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
+  fetch(despiration)
     .then(function (response) {
       return response.json()
     })
@@ -55,22 +55,29 @@ fetch(despiration)
     })
 }
 
-/*modal funtion---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+// modal function
 $(document).ready(function () {
   $('.modal').modal();
   $('.modal').modal('open')
 });
-/*sidenav function------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-$(document).ready(function(){
+
+// side nav function
+$(document).ready(function () {
   $('.sidenav').sidenav();
 });
-// showing card on button click
+
+// showing card on button click and hiding other cards when one is displayed
+function hideCurrentcard() {
+
+}
+
 document.getElementById("lightButton").addEventListener("click", showLight);
 function showLight() {
   var lightCard = document.getElementById("light-card");
   if (lightCard.style.display === "none") {
     lightCard.style.display = "block";
   }
+  // hideCurrentcard();
 }
 
 document.getElementById("darkButton").addEventListener("click", showDark);
@@ -79,6 +86,7 @@ function showDark() {
   if (darkCard.style.display === "none") {
     darkCard.style.display = "block";
   }
+  // hideCurrentcard();
 }
 
 document.getElementById("inspireButton").addEventListener("click", showInspire);
@@ -87,6 +95,7 @@ function showInspire() {
   if (inspireCard.style.display === "none") {
     inspireCard.style.display = "block";
   }
+  // hideCurrentcard();
 }
 
 document.getElementById("despireButton").addEventListener("click", showDespire);
@@ -95,8 +104,10 @@ function showDespire() {
   if (despireCard.style.display === "none") {
     despireCard.style.display = "block";
   }
+  // hideCurrentcard();
 }
 
+// setting favorite jokes to local storage
 function setFavorites() {
   var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
   var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
@@ -107,5 +118,5 @@ function setFavorites() {
   document.getElementById('fav-quote').value = darkFav
   document.getElementById('fav-quotet').value = inspireFav
   document.getElementById('fav-quote').value = despireFav
-  
+
 }

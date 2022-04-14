@@ -12,101 +12,110 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Jolly+Lodger&family=Meow+Script&family=Oleo+Script+Swash+Caps&family=Pathway+Gothic+One&family=Xanh+Mono&display=swap"
     rel="stylesheet">
-  <title>Document</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<!-- siebar for fave jokes -->
+<body id="gradient">
   <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background" id="nav-bar">
-      </div>
+    <li>
+      <div class="user-view">
+        <div class="background" id="nav-bar">
+        </div>
         <h4>Welcome To Your Favorites</h4>
         <br><br>
         <ul id="fav-quote" class="collection container col">
           <!-- list elements for favorites here -->
         </ul>
-        <br><br> 
+        <br><br>
         <button id="clear-btn">Clear Favorites</button>
       </div>
     </li>
   </ul>
-  
+
+  <!-- star icon for sidebar -->
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">star</i></a>
 
-    <div class="row col s12 m6">
-      <div class="col s3" style="display: none;" id="light-card">
-        <div class="col s12 ">
-          <div class="card" class="light-card" class="text-bubble">
-            <div class="card-content">
-              <span class="card-title" id="light-title">Light</span>
-              <p id="light-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+  <!-- heading -->
+  <h1>Choose your path</h1>
+
+  <!-- cards for jokes -->
+  <div class="row col s12 m6">
+    <div class="col s3" style="display: none;" id="light-card">
+      <div class="col s12 ">
+        <div class="card" class="light-card" id="text-bubble">
+          <div class="card-content">
+            <span class="card-title" id="neon" id="light-title">Light</span>
+            <p id="light-text"></p>
+          </div>
+          <div class="card-action">
+            <a id="save" href="#">Save</a>
           </div>
         </div>
       </div>
 
-      <div class="col s3" style="display: none;" id="dark-card">
-        <div class="col s12">
-          <div class="card" class="dark-card" class="box-bubble">
-            <div class="card-content">
-              <span class="card-title" id="fire" id="dark-title">Dark</span>
-              <p id="dark-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 
-
-      <div class="col s3" style="display: none;" id="inspire-card">
-        <div class="col s12">
-          <div class="card" class="light-card" class="text-bubble">
-            <div class="card-content">
-              <span class="card-title" id="inspire-title">Inspire</span>
-              <p id="inspire-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+  <div class="col s3" style="display: none;" id="dark-card">
+    <div class="col s12">
+      <div class="card" class="dark-card" id="box-bubble">
+        <div class="card-content">
+          <span class="card-title" id="fire" id="dark-title">Dark</span>
+          <p id="dark-text"></p>
           </div>
-        </div>
-      </div>
-
-      <div class="col s3" style="display: none;" id="despire-card">
-        <div class="col s12">
-          <div class="card" class="dark-card" class="box-bubble">
-            <div class="card-content">
-              <span class="card-title" id="fire" id="despire-title">Despire</span>
-              <p id="despire-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
-          </div>
+          <div class="card-action">
+            <a id="save" href="#">Save</a>
         </div>
       </div>
     </div>
 
-  <aside>
-    <h1>Choose your path</h1>
-      <div class="row" id="btns">
-        <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
-        <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
-        <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
-        <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
+
+    <div class="col s3" style="display: none;" id="inspire-card">
+      <div class="col s12">
+        <div class="card" class="light-card" id="text-bubble">
+          <div class="card-content">
+            <span class="card-title" id="neon" id="inspire-title">Inspire</span>
+            <p id="inspire-text"></p>
+          </div>
+          <div class="card-action">
+            <a id="save" href="#">Save</a>
+          </div>
+        </div>
       </div>
+
+    </div>
+  </div>
+
+
+  <div class="col s3" style="display: none;" id="despire-card">
+    <div class="col s12">
+      <div class="card" class="dark-card" id="box-bubble">
+        <div class="card-content">
+          <span class="card-title" id="fire" id="despire-title">Despire</span>
+          <p id="despire-text"></p>
+        </div>
+        <div class="card-action">
+          <a id="save" href="#">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- buttons -->
+  <aside id="gradient">
+    <div class="row" id="btns">
+      <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
+      <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
+      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
+      <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
+    </div>
   </aside>
 
 
-  <!-- modal------------------------------------------------------------------------------------------------------------------- -->
+<!-- pop-up modal -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Quote Generator</h4>
@@ -119,19 +128,20 @@
       </ul>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
+      <a id="okay" href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
     </div>
   </div>
 
 
 </body>
 
+<!-- function for changing theme on click -->
 <script>
   function changeTheme(value) {
-      var sheets = document
-          .getElementsByTagName('link');
+    var sheets = document
+      .getElementsByTagName('link');
 
-      sheets[0].href = value;
+    sheets[0].href = value;
   }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

@@ -5,28 +5,66 @@ font-family: 'Xanh Mono', monospace; */
 /*-----COLORS----- */
 
 /* DEFAULT THEME */
-body {
-    background-image: url(./customization/815521_tv-test-pattern-abstract-2560x1600-hd-wallpapers-and-free-stock-photo_2560x1600_h.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+#gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 }
 
-span {
-    font-family: 'Bungee Inline', cursive;
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-p {
-    font-family: 'Xanh Mono', monospace;
+#okay {
+    margin: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+    background-image: linear-gradient(-225deg,
+
+    #ee7752 0%,
+    #e73c7e 29%,
+    #23a6d5 67%,
+    #23d5ab 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
 }
 
 #btns {
     display: flex;
     justify-content: space-evenly;
+    font-family: 'Xanh Mono', monospace;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
+    font-family: 'Bungee Inline', cursive;
+    position: absolute;
+    top: -25px;
+    right: 300px;
 }
 
 aside {
@@ -38,8 +76,12 @@ aside {
     justify-content: center;
 }
 
+h4 {
+    font-family: 'Bungee Inline', cursive;
+}
+
 #slide-out {
-   background-color: blueviolet; 
+   background-color: #fff; 
 }
 
 .material-icons {
