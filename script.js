@@ -24,7 +24,7 @@ function lightJoke() {
     })
     .then(function (data) {
       console.log(data)
-      lightCard.quoteText = ((data.setup) + (" ") + (data.delivery))
+      quoteText = lightCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
@@ -37,7 +37,7 @@ function darkJoke() {
     })
     .then(function (data) {
       console.log(data)
-      darkCard.textContent = ((data.setup) + (" ") + (data.delivery))
+      quoteText = darkCard.textContent = ((data.setup) + (" ") + (data.delivery))
     })
 }
 
@@ -49,7 +49,7 @@ function inspire() {
       return response.json();
     })
     .then(function (data) {
-      inspireCard.textContent = ((data.quote) + (" ") + (data.author))
+     quoteText = inspireCard.textContent = ((data.quote) + (" ") + (data.author))
     })
 }
 
@@ -61,7 +61,7 @@ function despire() {
       return response.json()
     })
     .then(function (data) {
-      despireCard.textContent = ((data.message) + ("  -Donald Trump"))
+     quoteText = despireCard.textContent = ((data.message) + ("  -Donald Trump"))
     })
 }
 
@@ -124,20 +124,21 @@ function showDespire() {
 // }
 
 /*function to display quote in card---------------------------------------------------------------------------------------------*/
-var displayQuote = document.querySelector("#light-text")
-displayQuote.addEventListener("click", function(){
-  fetch(quoteText)
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (quoteText) {
-    console.log(quoteText)
-    quoteText = display.quoteText= (data.quote)
-  })
-})
+// var displayQuote = document.querySelector("#light-text")
+// displayQuote.addEventListener("click", function(){
+//   fetch(quoteText)
+//   .then(function (response) {
+//     return response.json()
+//   })
+//   .then(function (quoteText) {
+//     console.log(quoteText)
+    // quoteText = display.quoteText= (data.quote)
+//   })
+// })
 /*save button function---------------------------------------------------------------------------------------------------------*/
   saveButton.addEventListener("click", function(){
-    localStorage.setItem('text', quoteText)
+    console.log("clicked")
+    // localStorage.setItem('text', quoteText)
     /*favorite quote array layout------------------------*/
         var favorite = {
             quoteType: "light",
@@ -149,7 +150,7 @@ displayQuote.addEventListener("click", function(){
           favorites = [];
         }
         else {
-          favorites = JSON.parse('favorites');
+          favorites = JSON.parse(favorites);
         }
     /*we push our favorite quote into favorites--------------*/
         favorites.push(favorite)
@@ -160,6 +161,6 @@ displayQuote.addEventListener("click", function(){
         localStorage.setItem("quote", quoteText)
     /*list element dynamically created and with each saved quote the list will grow*/
         var savedLocation = document.createElement('li')
-        savedLocation.quoteText = (localStorage.getItem("quote"))
+        savedLocation.textContent = (localStorage.getItem("quote"))
         saved.append(savedLocation)
 })
