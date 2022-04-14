@@ -3,6 +3,10 @@ var darkCard = document.querySelector('#dark-text')
 var lightCard = document.querySelector('#light-text')
 var inspireCard = document.querySelector('#inspire-text')
 var despireCard = document.querySelector('#despire-text')
+var despireBox = document.getElementById("despire-card")
+var inspireBox = document.getElementById("inspire-card")
+var darkBox = document.getElementById("dark-card")
+var lightBox = document.getElementById("light-card")
 
 // puts joke in corresponding cards on button click
 document.getElementById("lightButton").addEventListener("click", lightJoke);
@@ -66,45 +70,37 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
 });
 
-// showing card on button click and hiding other cards when one is displayed
-function hideCurrentcard() {
-
-}
-
+// cards are displayed when clicked and hide other cards that are currently visible
 document.getElementById("lightButton").addEventListener("click", showLight);
 function showLight() {
-  var lightCard = document.getElementById("light-card");
-  if (lightCard.style.display === "none") {
-    lightCard.style.display = "block";
-  }
-  // hideCurrentcard();
+  lightBox.style.display = "block"
+  darkBox.style.display = "none"
+  inspireBox.style.display = "none"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("darkButton").addEventListener("click", showDark);
 function showDark() {
-  var darkCard = document.getElementById("dark-card");
-  if (darkCard.style.display === "none") {
-    darkCard.style.display = "block";
-  }
-  // hideCurrentcard();
+  darkBox.style.display = "block"
+  lightBox.style.display = "none"
+  inspireBox.style.display = "none"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("inspireButton").addEventListener("click", showInspire);
 function showInspire() {
-  var inspireCard = document.getElementById("inspire-card");
-  if (inspireCard.style.display === "none") {
-    inspireCard.style.display = "block";
-  }
-  // hideCurrentcard();
+  darkBox.style.display = "none"
+  lightBox.style.display = "none"
+  inspireBox.style.display = "block"
+  despireBox.style.display = "none"
 }
 
 document.getElementById("despireButton").addEventListener("click", showDespire);
 function showDespire() {
-  var despireCard = document.getElementById("despire-card");
-  if (despireCard.style.display === "none") {
-    despireCard.style.display = "block";
-  }
-  // hideCurrentcard();
+  darkBox.style.display = "none"
+  lightBox.style.display = "none";
+  inspireBox.style.display = "none"
+  despireBox.style.display = "block"
 }
 
 // setting favorite jokes to local storage
