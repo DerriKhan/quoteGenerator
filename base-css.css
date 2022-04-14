@@ -33,10 +33,10 @@ font-family: 'Xanh Mono', monospace; */
     font-size: xx-large;
     background-image: linear-gradient(-225deg,
 
-    #ee7752 0%,
-    #e73c7e 29%,
-    #23a6d5 67%,
-    #23d5ab 100%);
+            #ee7752 0%,
+            #e73c7e 29%,
+            #23a6d5 67%,
+            #23d5ab 100%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -105,7 +105,7 @@ h4 {
 }
 
 #slide-out {
-   background-color: #fff; 
+    background-color: #fff;
 }
 
 .material-icons {
@@ -113,5 +113,5 @@ h4 {
 }
 
 .material-icons:hover {
-     text-shadow:  5px 5px 5px rgb(255, 255, 143);
+    text-shadow: 5px 5px 5px rgb(255, 255, 143);
 }
