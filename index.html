@@ -12,100 +12,81 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Jolly+Lodger&family=Meow+Script&family=Oleo+Script+Swash+Caps&family=Pathway+Gothic+One&family=Xanh+Mono&display=swap"
     rel="stylesheet">
-  <title>Document</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-
-  <!-- <container>
-
-    <container>
-        <div class="text-bubble">
-            <h1 class="fire">Choose your path</h1>
-            <h2>I'm baby activated charcoal tilde lyft gastropub. Cardigan brooklyn marfa before they sold out bespoke
-                edison bulb 90's neutra ramps kogi hammock. Banh mi squid activated charcoal man braid. Austin four loko
-                ethical leggings bicycle rights bespoke man bun. Synth waistcoat 8-bit, kickstarter tumeric adaptogen
-                artisan air plant cloud bread scenester mustache pitchfork marfa cliche semiotics. Aesthetic activated
-                charcoal selvage shabby chic, palo santo microdosing prism bushwick readymade yuccie. Coloring book hot
-                chicken twee, gluten-free blue bottle cronut snackwave tofu direct trade occupy polaroid bushwick
-                organic
-                retro.</h2>
-        </div>
-    </container> -->
-
-
-    <div class="row col s12 m6">
-      <div class="col s3" style="display: none;" id="light-card">
-        <div class="col s12 ">
-          <div class="card" class="light-card" class="text-bubble">
-            <div class="card-content">
-              <span class="card-title" id="light-title">Light</span>
-              <p id="light-txt"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+<body id="gradient">
+  <div class="row col s12 m6">
+    <div class="col s3" style="display: none;" id="light-card">
+      <div class="col s12 ">
+        <div class="card" class="light-card" id="text-bubble">
+          <div class="card-content">
+            <span class="card-title" id="light-title">Light</span>
+            <p id="light-txt"></p>
           </div>
-
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
         </div>
+
       </div>
+    </div>
 
-      <div class="col s3" style="display: none;" id="dark-card">
-        <div class="col s12">
-          <div class="card" class="dark-card" class="box-bubble">
-            <div class="card-content">
-              <span class="card-title" id="fire" id="dark-title">Dark</span>
-              <p id="dark-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+    <div class="col s3" style="display: none;" id="dark-card">
+      <div class="col s12">
+        <div class="card" class="dark-card" id="box-bubble">
+          <div class="card-content">
+            <span class="card-title" id="fire" id="dark-title">Dark</span>
+            <p id="dark-text"></p>
           </div>
-
-        </div>
-      </div>
-
-
-      <div class="col s3" style="display: none;" id="inspire-card">
-        <div class="col s12">
-          <div class="card" class="light-card" class="text-bubble">
-            <div class="card-content">
-              <span class="card-title" id="inspire-title">Inspire</span>
-              <p id="inspire-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+          <div class="card-action">
+            <a href="#">Save</a>
           </div>
         </div>
+
       </div>
+    </div>
 
-      <div class="col s3" style="display: none;" id="despire-card">
-        <div class="col s12">
-          <div class="card" class="dark-card" class="box-bubble">
-            <div class="card-content">
-              <span class="card-title" id="fire" id="despire-title">Despire</span>
-              <p id="despire-text"></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Save</a>
-            </div>
+
+    <div class="col s3" style="display: none;" id="inspire-card">
+      <div class="col s12">
+        <div class="card" class="light-card" id="text-bubble">
+          <div class="card-content">
+            <span class="card-title" id="inspire-title">Inspire</span>
+            <p id="inspire-text"></p>
           </div>
-
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
         </div>
       </div>
     </div>
-  <aside>
-    <h1>Choose your path</h1>
-      <div class="row" id="btns">
-        <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
-        <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
-        <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
-        <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
+
+    <div class="col s3" style="display: none;" id="despire-card">
+      <div class="col s12">
+        <div class="card" class="dark-card" id="box-bubble">
+          <div class="card-content">
+            <span class="card-title" id="fire" id="despire-title">Despire</span>
+            <p id="despire-text"></p>
+          </div>
+          <div class="card-action">
+            <a href="#">Save</a>
+          </div>
+        </div>
+
       </div>
+    </div>
+  </div>
+  <aside id="gradient">
+    <h1 id="gradient">Choose your path</h1>
+    <div id="gradient" class="row" id="btns" class="button-area">
+      <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')">Light</a></button>
+      <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')">Dark</button>
+      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')">Inspire</button>
+      <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')">Despire</button>
+    </div>
 
     <br><br>
 
@@ -138,10 +119,10 @@
 
 <script>
   function changeTheme(value) {
-      var sheets = document
-          .getElementsByTagName('link');
+    var sheets = document
+      .getElementsByTagName('link');
 
-      sheets[0].href = value;
+    sheets[0].href = value;
   }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

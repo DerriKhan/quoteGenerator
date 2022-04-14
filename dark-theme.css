@@ -11,6 +11,7 @@ body {
     background-color: #201F1F;
     background-image: url(./customization/Fire-Flames-High-Quality-PNG.png), url(./customization/fire-welding-sparks-png.png);
     background-position: bottom, left;
+    background-repeat: no-repeat;
     width: 100%;
 }
 
@@ -94,7 +95,7 @@ p {
     padding: 10px;
 }
 
-.box-bubble {
+#box-bubble {
     background-color: white;
     /* position: absolute;
     left: 100px;
