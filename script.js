@@ -9,11 +9,10 @@ var saveButton3 = document.getElementById('save3')
 var saveButton4 = document.getElementById('save4')
 var quoteText = ("")
 var saved = document.querySelector("#fav-quote")
-
-// var despireBox = document.getElementById("despire-card")
-// var inspireBox = document.getElementById("inspire-card")
-// var darkBox = document.getElementById("dark-card")
-// var lightBox = document.getElementById("light-card")
+var despireBox = document.getElementById("despire-card")
+var inspireBox = document.getElementById("inspire-card")
+var darkBox = document.getElementById("dark-card")
+var lightBox = document.getElementById("light-card")
 
 
 // puts joke in corresponding cards on button click

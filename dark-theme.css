@@ -15,6 +15,18 @@ h1 {
     display: none;
 }
 
+#tv {
+    display: none;
+}
+
+#silhouette {
+    display: none;
+}
+
+#vid-container {
+    display: none;
+}
+
 span {
     font-size: xxx-large;
     font-family: 'Jolly Lodger', cursive;
@@ -136,6 +148,11 @@ p {
     border-radius: 30px;
     border: #E22C2C solid 7px;
     text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .material-icons:hover {
