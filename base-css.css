@@ -63,6 +63,19 @@ font-family: 'Xanh Mono', monospace; */
     z-index: 3;
 }
 
+header {
+    position: absolute;
+    top: 0;
+    right:0;
+    justify-content: center;  
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+
 #all-btns {
     background-color: transparent;
 }
