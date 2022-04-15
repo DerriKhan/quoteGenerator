@@ -34,9 +34,7 @@
   <link id="base-theme" rel="stylesheet" href="base-css.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Jolly+Lodger&family=Meow+Script&family=Oleo+Script+Swash+Caps&family=Pathway+Gothic+One&family=Xanh+Mono&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Jolly+Lodger&family=Meow+Script&family=Oleo+Script+Swash+Caps&family=Pathway+Gothic+One&family=Xanh+Mono&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,14 +46,12 @@
   <ul id="slide-out" class="sidenav">
     <li>
       <div class="user-view">
-        <div class="background" id="nav-bar">
-        </div>
+        <div class="background" id="nav-bar"></div>
         <h4>Welcome To Your Favorites</h4>
-        <br><br>
-        <ul id="fav-quote" class="collection container col">
+        <br>
+        <ul id="fav-quote" class="collection container col"></ul>
           <!-- list elements for favorites here -->
-        </ul>
-        <br><br>
+        <br>
         <button id="clear-btn">Clear Favorites</button>
       </div>
     </li>
@@ -71,12 +67,10 @@
 
   <!-- user video box -->
   <img src="./customization/m2i8b1K9d3b1N4N4.png" width="350px" height="275px" id="tv">
-    <video autoplay="true" id="videoElement">
-    </video>
-  </div>
+    <video autoplay="true" id="videoElement"></video>
 
   <!-- cards for jokes -->
-  <div class="row">
+<div class="row">
     <div class="col s6" style="display: none;" id="light-card">
       <div class="col s12 ">
         <div class="card" class="light-card" id="text-bubble">
@@ -90,7 +84,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 
   <div class="col s6" style="display: none;" id="dark-card">
     <div class="col s12">
@@ -104,6 +98,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <div class="col s6" style="display: none;" id="inspire-card">
       <div class="col s12">
@@ -118,7 +113,6 @@
         </div>
       </div>
     </div>
-  </div>
 
 
   <div class="col s6" style="display: none;" id="despire-card">
@@ -134,6 +128,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <!-- pop-up modal -->
   <div id="modal1" class="modal">
@@ -159,13 +154,13 @@
   <aside id="all-btns">
     <div class="row" id="btns">
       <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')"><img
-          src="./customization/pig-angel.png" width="110px" height="100px"></a></button>
-          <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')"><img
-            src="./customization/bear-angel.png" width="110px" height="100px"></button>
+        src="./customization/pig-angel.png" width="110px" height="100px"></a></button>
+      <button id="inspireButton" onclick="showInspire(); changeTheme('light-theme.css')"><img
+        src="./customization/bear-angel.png" width="110px" height="100px"></button>
       <button id="darkButton" onclick="showDark(); changeTheme('dark-theme.css')"><img
-          src="./customization/pig-devil.png" width="100px" height="100px"></button>
+        src="./customization/pig-devil.png" width="100px" height="100px"></button>
       <button id="despireButton" onclick="showDespire(); changeTheme('dark-theme.css')"><img
-          src="./customization/bear-devil.png" width="100px" height="100px"></button>
+        src="./customization/bear-devil.png" width="100px" height="100px"></button>
     </div>
   </aside>
   </footer>
