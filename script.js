@@ -10,10 +10,10 @@ var saveButton4 = document.getElementById('save4')
 var quoteText = ("")
 var saved = document.querySelector("#fav-quote")
 
-var despireBox = document.getElementById("despire-card")
-var inspireBox = document.getElementById("inspire-card")
-var darkBox = document.getElementById("dark-card")
-var lightBox = document.getElementById("light-card")
+// var despireBox = document.getElementById("despire-card")
+// var inspireBox = document.getElementById("inspire-card")
+// var darkBox = document.getElementById("dark-card")
+// var lightBox = document.getElementById("light-card")
 
 
 // puts joke in corresponding cards on button click
@@ -32,7 +32,7 @@ function lightJoke() {
 
 document.getElementById("darkButton").addEventListener("click", darkJoke);
 function darkJoke() {
-  var jokeDark = "https://v2.jokeapi.dev/joke/Any?&type=twopart"
+  var jokeDark = "https://v2.jokeapi.dev/joke/Spooky?&type=twopart"
   fetch(jokeDark)
     .then(function (response) {
       return response.json()
@@ -68,10 +68,10 @@ function despire() {
 }
 
 // modal function
-// $(document).ready(function () {
-//   $('.modal').modal();
-//   $('.modal').modal('open')
-// });
+$(document).ready(function () {
+  $('.modal').modal();
+  $('.modal').modal('open')
+});
 
 // side nav function
 $(document).ready(function () {
@@ -100,8 +100,8 @@ function showDark() {
 document.getElementById("inspireButton").addEventListener("click", showInspire);
 function showInspire() {
   darkBox.style.display = "none"
-  lightBox.style.display = "none"
-  inspireBox.style.display = "block"
+  lightBox.style.display = "block"
+  inspireBox.style.display = "none"
   despireBox.style.display = "none"
 }
 
@@ -114,35 +114,10 @@ function showDespire() {
 }
 
 // setting favorite jokes to local storage
-
-// function setFavorites() {
-//   var lightFav = localStorage.setItem('lightFav', document.getElementById('#light-text'));
-//   var darkFav = localStorage.setItem('darkFav', document.getElementById('#dark-text'))
-//   var inspireFav = localStorage.setItem('inspireFav', document.getElementById('#inspire-text'))
-//   var despireFav = localStorage.setItem('despireFav', document.getElementById('#despire-text'))
-
-//   document.getElementById('fav-quote').value = lightFav
-//   document.getElementById('fav-quote').value = darkFav
-//   document.getElementById('fav-quotet').value = inspireFav
-//   document.getElementById('fav-quote').value = despireFav
-// }
-
-/*function to display quote in card---------------------------------------------------------------------------------------------*/
-// var displayQuote = document.querySelector("#light-text")
-// displayQuote.addEventListener("click", function(){
-//   fetch(quoteText)
-//   .then(function (response) {
-//     return response.json()
-//   })
-//   .then(function (quoteText) {
-//     console.log(quoteText)
-    // quoteText = display.quoteText= (data.quote)
-//   })
-// })
 /*save button function---------------------------------------------------------------------------------------------------------*/
   saveButton.addEventListener("click", function(){
     console.log("clicked")
-    // localStorage.setItem('text', quoteText)
+    localStorage.setItem('text', quoteText)
     /*favorite quote array layout------------------------*/
         var favorite = {
             quoteType: "light",
@@ -168,14 +143,14 @@ function showDespire() {
         var savedLocation = document.createElement('li')
         savedLocation.textContent = (localStorage.getItem("quote"))
         saved.append(savedLocation)
-})
+  })
 
-saveButton2.addEventListener("click", function(){
-  console.log("clicked")
-  // localStorage.setItem('text', quoteText)
+  saveButton2.addEventListener("click", function(){
+    console.log("clicked")
+    localStorage.setItem('text', quoteText)
   /*favorite quote array layout------------------------*/
       var favorite = {
-          quoteType: "light",
+          quoteType: "dark",
           quote: quoteText
         }
         console.log(favorite)
@@ -187,6 +162,7 @@ saveButton2.addEventListener("click", function(){
       else {
         favorites = JSON.parse(favorites);
       }
+      
   /*we push our favorite quote into favorites--------------*/
       favorites.push(favorite)
   /*we create an all favorites to save our favorites inside of so that what we save doesn't get saved over for new quotes*/
@@ -202,10 +178,10 @@ saveButton2.addEventListener("click", function(){
 
 saveButton3.addEventListener("click", function(){
   console.log("clicked")
-  // localStorage.setItem('text', quoteText)
+  localStorage.setItem('text', quoteText)
   /*favorite quote array layout------------------------*/
       var favorite = {
-          quoteType: "light",
+          quoteType: "inspire",
           quote: quoteText
         }
         console.log(favorite)
@@ -232,10 +208,10 @@ saveButton3.addEventListener("click", function(){
 
 saveButton4.addEventListener("click", function(){
   console.log("clicked")
-  // localStorage.setItem('text', quoteText)
+  localStorage.setItem('text', quoteText)
   /*favorite quote array layout------------------------*/
       var favorite = {
-          quoteType: "light",
+          quoteType: "despire",
           quote: quoteText
         }
         console.log(favorite)
