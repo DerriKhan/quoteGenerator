@@ -97,8 +97,8 @@ function showDark() {
 document.getElementById("inspireButton").addEventListener("click", showInspire);
 function showInspire() {
   darkBox.style.display = "none"
-  lightBox.style.display = "block"
-  inspireBox.style.display = "none"
+  lightBox.style.display = "none"
+  inspireBox.style.display = "block"
   despireBox.style.display = "none"
 }
 
