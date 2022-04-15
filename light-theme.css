@@ -19,7 +19,11 @@ h1 {
 }
 
 #silhouette {
-   display: none;
+    display: none;
+}
+
+#vid-container {
+    display: none;
 }
 
 #neon {
@@ -114,6 +118,11 @@ p {
     border-radius: 30px;
     text-align: center;
     border: #FFD60E solid 7px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .material-icons:hover {
