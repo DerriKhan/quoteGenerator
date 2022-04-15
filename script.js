@@ -68,10 +68,10 @@ function despire() {
 }
 
 // modal function
-// $(document).ready(function () {
-//   $('.modal').modal();
-//   $('.modal').modal('open')
-// });
+$(document).ready(function () {
+  $('.modal').modal();
+  $('.modal').modal('open')
+});
 
 // side nav function
 $(document).ready(function () {
