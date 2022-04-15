@@ -14,6 +14,14 @@ h1 {
     display: none;
 }
 
+#tv {
+    display: none;
+}
+
+#silhouette {
+   display: none;
+}
+
 #neon {
     font-size: xxx-large;
     padding: 25px;
