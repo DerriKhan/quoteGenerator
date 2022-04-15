@@ -7,17 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quote/Joke Generator</title>
   <style>
-    #container {
-      margin: 0px auto;
-      width: 250px;
-      height: 250px;
-      border: 10px #333 solid;
+    #vid-container {
+      margin: auto;
+      width: 350px;
+      height: 275px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+      z-index: 2;
     }
 
     #videoElement {
-      width: 250px;
-      height: 250px;
-      background-color: #666;
+      width: 350px;
+      height: 275px;
+      background-color: transparent;
     }
   </style>
 
@@ -59,18 +64,14 @@
     <h1 class="col s12 m12">Choose your path</h1>
   </header>
 
-  <div id="container">
+  <!-- user video box -->
+  <img src="./customization/m2i8b1K9d3b1N4N4.png" width="350px" height="275px" id="tv">
+  <img src="./customization/pngfind.com-human-vector-png-6881407.png" width="400px" height="400px" id="silhouette">
+  <div id="vid-container">
     <video autoplay="true" id="videoElement">
 
     </video>
   </div>
-
-  <div id="container">
-    <video autoplay="true" id="videoElement">
-
-    </video>
-  </div>
-
   <!-- cards for jokes -->
   <div class="row">
     <div class="col s6" style="display: none;" id="light-card">
@@ -95,9 +96,9 @@
         <div class="card-content">
           <span class="card-title" id="fire" id="dark-title">Dark</span>
           <p id="dark-text"></p>
-          </div>
-          <div class="card-action">
-            <a id="save2" href="#">Save</a>
+        </div>
+        <div class="card-action">
+          <a id="save2" href="#">Save</a>
         </div>
       </div>
     </div>
@@ -135,7 +136,7 @@
   </div>
 
   <!-- buttons -->
-  <aside id="gradient">
+  <aside id="all-btns">
     <div class="row" id="btns">
       <button id="lightButton" onclick="showLight(); changeTheme('light-theme.css')"><img
           src="./customization/pig-angel.png" width="110px" height="100px"></a></button>
@@ -172,15 +173,15 @@
 <script>
   var video = document.querySelector("#videoElement");
 
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+  }
 </script>
 
 <!-- function for changing theme on click -->
@@ -195,4 +196,5 @@ if (navigator.mediaDevices.getUserMedia) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="script.js"></script>
+
 </html>

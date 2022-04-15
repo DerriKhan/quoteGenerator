@@ -54,6 +54,28 @@ font-family: 'Xanh Mono', monospace; */
     }
 }
 
+#tv {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+#silhouette {
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#all-btns {
+    background-color: transparent;
+}
+
 #lightButton {
     background: transparent;
     border: none;
@@ -88,6 +110,7 @@ h1 {
     font-family: 'Bungee Inline', cursive;
     display: flex;
     justify-content: center;
+    top: auto;
 }
 
 aside {
